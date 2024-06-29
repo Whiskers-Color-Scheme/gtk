@@ -1,0 +1,73 @@
+// Whiskers Theme Color Palette
+
+// Red
+$red-light: #FF8C7C;
+$red-dark: #B43A2A;
+
+// Pink
+$pink-light: #FFAAF5;
+$pink-dark: #7D0E70;
+
+// Purple
+$purple-light: #FFAAF5;
+$purple-dark: #7D0E70;
+
+// Blue
+$blue-light: #A5CEFF;
+$blue-dark: #5284BE;
+
+// Teal
+$teal-light: #A5CEFF;
+$teal-dark: #5284BE;
+
+// Green
+$green-light: #B1E380;
+$green-dark: #6A9534;
+
+// Yellow
+$yellow-light: #FFE072;
+$yellow-dark: #A87B0A;
+
+// Orange
+$orange-light: #FFB26C;
+$orange-dark: #C15D01;
+
+// Grey
+$grey-050: #FFF3E2; /*Title bar*/
+$grey-100: #FFF3E2; /*Background and inactive title bar*/
+$grey-150: #FFF3E2; /*Popups*/
+$grey-200: #FFF3E2;
+$grey-250: #FFF3E2;
+$grey-300: #FFF3E2;
+$grey-350: #FFF3E2;
+$grey-400: #FFF3E2;
+$grey-450: #FFF3E2;
+$grey-500: #FFF3E2;
+$grey-550: #0E0600;
+$grey-600: #0E0600;
+$grey-650: #1B0B00;  /*Used in popups*/
+$grey-700: #0E0600; /*Dark background*/
+$grey-750: #1B0B00; /*Active dark title bar*/
+$grey-750: #1B0B00; 
+$grey-800: #1B0B00; /*Used in text color popups*/
+$grey-850: #1B0B00;
+$grey-900: #1B0B00;
+$grey-950: #1B0B00;
+
+// White
+$white: #FFF9F0;
+
+// Black
+$black: #0E0600;
+
+// Button
+$button-close: if($variant == 'light', $red-dark, $red-light);
+$button-max: if($variant == 'light', $green-dark, $green-light);
+$button-min: if($variant == 'light', $yellow-dark, $yellow-light);
+
+// Link
+$links: if($variant == 'light', $blue-dark, $blue-light);
+
+// Theme
+$default-light: $yellow-dark;
+$default-dark: $yellow-light;
