@@ -1,6 +1,6 @@
 # Building Guide
 - Copy the colloid directory to somewhere outside the repo and go that location.
-- Copy the color [palette](./whiskers-assets/_color-palette-whiskers.scss) file to 
+- Copy the color [palette](./whiskers-assets/_color-palette-whiskers.scss) file to colloid/src/sass
 - Copy the content from [plank](./plank/) to colloid/src/main/plank
 - Copy the content from [assets](./assets/) to colloid/src/assets
 - Add the following in [assets.sh](../colloid/assets.sh) and [gtkrc.sh](../colloid/gtkrc.sh) at correct places:
@@ -46,7 +46,7 @@ if [[ "$scheme" == '-Whiskers' ]]; then
     esac
   fi
 ```
-```
+```bash
 -Whiskers)
     background_light='#FFF9F0'
     background_dark='#0E0600'
@@ -57,10 +57,10 @@ if [[ "$scheme" == '-Whiskers' ]]; then
 ```
 
 - Add the following in the [install.sh](../colloid/install.sh):
-```
+```bash
 SCHEME_VARIANTS=('' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin', '-Whiskers')
 ``` 
-```
+```bash
 whiskers)
   colorscheme='true'
   schemes+=("${SCHEME_VARIANTS[6]}")
@@ -68,17 +68,17 @@ whiskers)
   shift
   ;;
 ```
-```
+```bash
 -Whiskers)
   scheme_color='whiskers'
   ;;
 ```
 
 - Add the following in [assets.sh](../colloid/src/assets/gtk-2.0/)
-```
+```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
 ```
-```
+```bash
 if [[ "$type" == "-Whiskers" ]]; then
   background_color='#FFF9F0'
   case "$theme" in 
@@ -112,7 +112,7 @@ if [[ "$type" == "-Whiskers" ]]; then
   esac
 fi
 ```
-```
+```bash
 if [[ "$type" == "-Whiskers" ]]; then
   background_color='#0E0600'
   case "$theme" in 
@@ -148,11 +148,11 @@ fi
 ```
 
 - Add the following in [make-assets.sh](../colloid/src/assets/xfwm4/make-assets.sh): 
-```
+```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin', '-Whiskers'; do
   
 ```
-```
+```bash
 if [[ "$type" == '-Whiskers' ]]; then
   headerbar_light='#FFF9F0'
   headerbar_dark='#0E0600'
@@ -165,25 +165,25 @@ fi
 ```
 
 - Add the following in [render-assets.sh](../colloid/src/assets/xfwm4/render-assets.sh): 
-```
+```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
 ```
-```
+```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
 ```
 
 - Add the following in [render-assets.sh](../colloid/src/assets/gtk-2.0/) :
-```
+```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
 ```
 
-```
+```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
     
 ```
 
 # Install Script
 To make all the whiskers themes
-```sh
+```bash
 sh install.sh --tweaks whiskers -l -t yellow teal red purple green orange --dest /tmp/whiskers-gtk-builder;
 ```
