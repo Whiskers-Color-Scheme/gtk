@@ -1,9 +1,10 @@
 # Building Guide
 - Copy the colloid directory to somewhere outside the repo and go that location.
+- Copy the color [palette](./whiskers-assets/_color-palette-whiskers.scss) file to 
 - Copy the content from [plank](./plank/) to colloid/src/main/plank
 - Copy the content from [assets](./assets/) to colloid/src/assets
 - Add the following in [assets.sh](../colloid/assets.sh) and [gtkrc.sh](../colloid/gtkrc.sh) at correct places:
-```
+```bash
 if [[ "$scheme" == '-Whiskers' ]]; then
     case "$theme" in
       '')
