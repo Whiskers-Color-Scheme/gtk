@@ -1,5 +1,5 @@
 # Building Guide
-- Copy the colloid directory to somewhere outside the repo and go that location.
+- Clone the colloid theme anywhere in your pc. https://github.com/vinceliuice/Colloid-gtk-theme.
 - Copy the color [palette](./whiskers-assets/_color-palette-whiskers.scss) file to colloid/src/sass
 - Copy the content from [plank](./plank/) to colloid/src/main/plank
 - Copy the content from [assets](./assets/) to colloid/src/assets
@@ -17,7 +17,7 @@ if [[ "$scheme" == '-Whiskers' ]]; then
         ;;
       -Pink)
         theme_color_dark='#7D0E70'
-        theme_color_light='#FFAAF5'
+        theme_color_light='#FFAAF5'     
         ;;
       -Red)
         theme_color_dark='#B43A2A'
@@ -74,7 +74,7 @@ whiskers)
   ;;
 ```
 
-- Add the following in [assets.sh](../colloid/src/assets/gtk-2.0/)
+- Add the following in [make-assets.sh](../colloid/src/assets/gtk-2.0/)
 ```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
 ```
@@ -147,6 +147,16 @@ if [[ "$type" == "-Whiskers" ]]; then
 fi
 ```
 
+- Add the following in [render-assets.sh](../colloid/src/assets/gtk-2.0/) :
+```bash
+for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
+```
+
+```bash
+for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
+    
+```
+
 - Add the following in [make-assets.sh](../colloid/src/assets/xfwm4/make-assets.sh): 
 ```bash
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin', '-Whiskers'; do
@@ -172,18 +182,15 @@ for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whisk
 for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
 ```
 
-- Add the following in [render-assets.sh](../colloid/src/assets/gtk-2.0/) :
-```bash
-for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
-```
 
-```bash
-for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Whiskers'; do
-    
-```
 
 # Install Script
-To make all the whiskers themes
+To make all the whiskers themes run the install.sh script in the new modified colloid folder
 ```bash
 sh install.sh --tweaks whiskers -l -t yellow teal red purple green orange --dest /tmp/whiskers-gtk-builder;
+```
+
+To make a zip with the containing themes run the [make-themes.py](./make-themes.py) script
+```bash
+python make-themes.py
 ```
