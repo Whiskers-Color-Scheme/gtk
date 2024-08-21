@@ -5,8 +5,8 @@
 ### Whiskers for [GTK](https://www.gtk.org/)
 
 <div>
-    <img src="https://raw.githubusercontent.com/Whiskers-Color-Scheme/assets/f73d25d4aa4480b7c4d593fb6ae8f4288f3fb5c0/previews/panther-preview.svg" width="300">
-    <img src="https://raw.githubusercontent.com/Whiskers-Color-Scheme/assets/f73d25d4aa4480b7c4d593fb6ae8f4288f3fb5c0/previews/tiger-preview.svg" width="300">
+    <img src="panther-preview.webp" width="300">
+    <img src="tiger-preview.webp" width="300">
 </div>
 </div>
 
