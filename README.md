@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Whiskers-Color-Scheme/assets/main/logos/logo-rounded.webp" width="100">
+<img src="https://raw.githubusercontent.com/Whiskers-Color-Scheme/assets/main/logos/readme-logo.png" width="100">
 
 ### Whiskers for [GTK](https://www.gtk.org/)
 
