@@ -23,7 +23,7 @@ mkdir -p ~/.themes; cp -r Whiskers-Panther-Banana/* ~/.themes #Change the folder
 
 - To use in libadwaita copy the content from the `gtk-4.0` folder to the config folder
 ```bash
-cp -r Whiskers-Panther-Banana/Whiskers-Banana-Panther/gtk-4.0/ ~/.config/gtk-4.0
+cp -r Whiskers-Panther-Banana/Whiskers-Banana-Panther/gtk-4.0/* ~/.config/gtk-4.0
 ```
 
 - Finally use gnome tweaks or anything available to apply the theme 😄
